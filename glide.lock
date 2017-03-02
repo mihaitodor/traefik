@@ -1,5 +1,5 @@
-hash: f2a0b9af55c8312762e4148bd876e5bd2451c240b407fbb6d4a5dbc56bf46c05
-updated: 2017-02-07T14:15:03.854561081+01:00
+hash: b4e99f1210c5bfb7784b55c9ec5b54629fadaea0625b29e540979b1acbd7dc09
+updated: 2017-03-02T09:39:03.718549862+01:00
 imports:
 - name: bitbucket.org/ww/goautoneg
   version: 75cd24fc2f2c2a2088577d12123ddee5f54e0675
@@ -352,7 +352,7 @@ imports:
   subpackages:
   - src/egoscale
 - name: github.com/rancher/go-rancher
-  version: 2c43ff300f3eafcbd7d0b89b10427fc630efdc1e
+  version: 5b8f6cc26b355ba03d7611fce3844155b7baf05b
   subpackages:
   - client
 - name: github.com/ryanuber/go-glob
