@@ -1,5 +1,5 @@
-hash: 8349c21c53c639aa79752c4e4b07e323ddb4f05be783564d7de687afbb6f2d67
-updated: 2017-03-28T22:35:17.448681338+02:00
+hash: 7df41212d9b6f9aa4f7c586491c9a7f0baca875b7ef9cbe4d05a94638a9978f7
+updated: 2017-04-04T16:53:48.205480193+02:00
 imports:
 - name: bitbucket.org/ww/goautoneg
   version: 75cd24fc2f2c2a2088577d12123ddee5f54e0675
@@ -87,7 +87,7 @@ imports:
 - name: github.com/codegangsta/negroni
   version: dc6b9d037e8dab60cbfc09c61d6932537829be8b
 - name: github.com/containous/flaeg
-  version: b5d2dc5878df07c2d74413348186982e7b865871
+  version: a731c034dda967333efce5f8d276aeff11f8ff87
 - name: github.com/containous/mux
   version: a819b77bba13f0c0cbe36e437bc2e948411b3996
 - name: github.com/containous/staert
@@ -129,6 +129,10 @@ imports:
   version: f6b1d56f1c048bd94d7e42ac36efb4d57b069b6f
 - name: github.com/dgrijalva/jwt-go
   version: 9ed569b5d1ac936e6494082958d63a6aa4fff99a
+- name: github.com/dnsimple/dnsimple-go
+  version: eeb343928d9a3de357a650c8c25d8f1318330d57
+  subpackages:
+  - dnsimple
 - name: github.com/docker/distribution
   version: 325b0804fef3a66309d962357aac3c2ce3f4d329
   subpackages:
@@ -352,7 +356,7 @@ imports:
   subpackages:
   - src/egoscale
 - name: github.com/rancher/go-rancher
-  version: 2c43ff300f3eafcbd7d0b89b10427fc630efdc1e
+  version: 5b8f6cc26b355ba03d7611fce3844155b7baf05b
   subpackages:
   - client
 - name: github.com/ryanuber/go-glob
@@ -393,7 +397,7 @@ imports:
 - name: github.com/vdemeester/docker-events
   version: be74d4929ec1ad118df54349fda4b0cba60f849b
 - name: github.com/vulcand/oxy
-  version: fcc76b52eb8568540a020b7a99e854d9d752b364
+  version: f88530866c561d24a6b5aac49f76d6351b788b9f
   repo: https://github.com/containous/oxy.git
   vcs: git
   subpackages:
@@ -415,12 +419,8 @@ imports:
   - plugin
   - plugin/rewrite
   - router
-- name: github.com/weppos/dnsimple-go
-  version: 65c1ca73cb19baf0f8b2b33219b7f57595a3ccb0
-  subpackages:
-  - dnsimple
 - name: github.com/xenolf/lego
-  version: ce8fb060cb8361a9ff8b5fb7c2347fa907b6fcac
+  version: 0e2937900b224325f4476745a9b53aef246b7410
   subpackages:
   - acme
   - providers/dns

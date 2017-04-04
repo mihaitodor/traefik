@@ -143,38 +143,21 @@ func (f *float64Value) SetValue(val interface{}) {
 	*f = float64Value(val.(float64))
 }
 
-// Duration is a custom type suitable for parsing duration values.
-// It supports `time.ParseDuration`-compatible values and suffix-less digits; in
-// the latter case, seconds are assumed.
-type Duration time.Duration
+// -- time.Duration Value
+type durationValue time.Duration
 
-// Set sets the duration from the given string value.
-func (d *Duration) Set(s string) error {
-	if v, err := strconv.Atoi(s); err == nil {
-		*d = Duration(time.Duration(v) * time.Second)
-		return nil
-	}
-
+func (d *durationValue) Set(s string) error {
 	v, err := time.ParseDuration(s)
-	*d = Duration(v)
+	*d = durationValue(v)
 	return err
 }
 
-// Get returns the duration value.
-func (d *Duration) Get() interface{} { return time.Duration(*d) }
+func (d *durationValue) Get() interface{} { return time.Duration(*d) }
 
-// String returns a string representation of the duration value.
-func (d *Duration) String() string { return (*time.Duration)(d).String() }
+func (d *durationValue) String() string { return (*time.Duration)(d).String() }
 
-// SetValue sets the duration from the given Duration-asserted value.
-func (d *Duration) SetValue(val interface{}) {
-	*d = Duration(val.(Duration))
-}
-
-// UnmarshalText deserializes the given text into a duration value.
-// It is meant to support TOML decoding of durations.
-func (d *Duration) UnmarshalText(text []byte) error {
-	return d.Set(string(text))
+func (d *durationValue) SetValue(val interface{}) {
+	*d = durationValue(val.(time.Duration))
 }
 
 // -- time.Time Value
