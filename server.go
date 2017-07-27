@@ -561,6 +561,9 @@ func (server *Server) loadConfig(configurations configs, globalConfiguration Glo
 
 	backendsHealthcheck := map[string]*healthcheck.BackendHealthCheck{}
 
+	// Clean up the backendConnLimits map each time we reload the config
+	server.backendConnLimits = make(map[string]*connlimit.ConnLimiter)
+
 	backend2FrontendMap := map[string]string{}
 	for _, configuration := range configurations {
 		frontendNames := sortedFrontendNamesForConfig(configuration)
